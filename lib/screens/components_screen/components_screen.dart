@@ -6,11 +6,6 @@ import 'package:prefab_app/widgets/custom_appbar.dart';
 
 class ComponentsScreen extends StatelessWidget {
   static final String routeName = '/components';
-  final String heroTag;
-
-  const ComponentsScreen({
-    this.heroTag,
-  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +20,9 @@ class ComponentsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Hero(
-                tag: '${heroTag}_title',
-                child: Text(
-                  'Components',
-                  style: kTitleTextStyle(context, Colors.black87),
-                ),
+              Text(
+                'Components',
+                style: kTitleTextStyle(context, Colors.black87),
               ),
             ],
           ),

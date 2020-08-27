@@ -19,21 +19,20 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      // routes: {
-      //   HomeScreen.routeName: (context) => HomeScreen(),
-      //   ComponentsScreen.routeName: (context) => ComponentsScreen()
-      // },
-      // initialRoute: ComponentsScreen.routeName,
-      onGenerateRoute: (RouteSettings settings) {
-        Map<String, WidgetBuilder> routes = {
-          HomeScreen.routeName: (context) => HomeScreen(),
-          ComponentsScreen.routeName: (context) =>
-              ComponentsScreen(heroTag: settings.arguments)
-        };
-
-        WidgetBuilder builder = routes[settings.name];
-        return MaterialPageRoute(builder: builder);
+      routes: {
+        HomeScreen.routeName: (context) => HomeScreen(),
+        ComponentsScreen.routeName: (context) => ComponentsScreen()
       },
+      // initialRoute: ComponentsScreen.routeName,
+      // onGenerateRoute: (RouteSettings settings) {
+      //   Map<String, WidgetBuilder> routes = {
+      //     HomeScreen.routeName: (context) => HomeScreen(),
+      //     ComponentsScreen.routeName: (context) => ComponentsScreen()
+      //   };
+
+      //   WidgetBuilder builder = routes[settings.name];
+      //   return MaterialPageRoute(builder: builder);
+      // },
     );
   }
 }

@@ -15,9 +15,8 @@ class StoreCategorySelector extends StatelessWidget {
         children: [
           Expanded(
             child: _StoreCategoryButton(
-              heroTag: 'prefab',
               onTap: () =>
-                  Navigator.pushNamed(context, ComponentsScreen.routeName, arguments: 'prefab'),
+                  Navigator.pushNamed(context, ComponentsScreen.routeName),
               name: 'Prefab',
               imageUrl:
                   'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
@@ -28,9 +27,8 @@ class StoreCategorySelector extends StatelessWidget {
           ),
           Expanded(
             child: _StoreCategoryButton(
-              heroTag: 'components',
-              onTap: () =>
-                  Navigator.pushNamed(context, ComponentsScreen.routeName, arguments: 'components'),
+              onTap: () => Navigator.pushNamed(
+                  context, ComponentsScreen.routeName),
               name: 'Components',
               imageUrl:
                   'https://images.unsplash.com/photo-1560636201-c08c2b24e147?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1483&q=80',
@@ -43,13 +41,12 @@ class StoreCategorySelector extends StatelessWidget {
 }
 
 class _StoreCategoryButton extends StatefulWidget {
-  final String heroTag;
   final String name;
   final String imageUrl;
   final Function onTap;
 
   const _StoreCategoryButton(
-      {@required this.name, @required this.imageUrl, this.onTap, this.heroTag});
+      {@required this.name, @required this.imageUrl, this.onTap});
 
   @override
   __StoreCategoryButtonState createState() => __StoreCategoryButtonState();
@@ -97,12 +94,9 @@ class __StoreCategoryButtonState extends State<_StoreCategoryButton> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Hero(
-                      tag: '${widget.heroTag}_title',
-                      child: Text(
-                        widget.name,
-                        style: kTitleTextStyle(context, Colors.white),
-                      ),
+                    Text(
+                      widget.name,
+                      style: kTitleTextStyle(context, Colors.white),
                     ),
                     Container(
                         margin: const EdgeInsets.symmetric(

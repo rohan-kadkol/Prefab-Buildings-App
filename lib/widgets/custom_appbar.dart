@@ -5,18 +5,21 @@ import 'package:prefab_app/screens/home_screen/components/pages_bar.dart';
 class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultMargin),
-      height: 120.0,
-      color: Theme.of(context).primaryColorLight,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Image(
-            image: AssetImage('assets/images/logo_large.png'),
-          ),
-          PagesBar()
-        ],
+    return Hero(
+      tag: 'app_bar',
+          child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: kDefaultMargin),
+        height: 120.0,
+        color: Theme.of(context).primaryColorLight,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image(
+              image: AssetImage('assets/images/logo_large.png'),
+            ),
+            PagesBar()
+          ],
+        ),
       ),
     );
   }
