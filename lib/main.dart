@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prefab_app/screens/components_screen/components_screen.dart';
 import 'package:prefab_app/screens/home_screen/home_screen.dart';
 
 void main() {
@@ -18,7 +19,21 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      routes: {HomeScreen.routeName: (context) => HomeScreen()},
+      // routes: {
+      //   HomeScreen.routeName: (context) => HomeScreen(),
+      //   ComponentsScreen.routeName: (context) => ComponentsScreen()
+      // },
+      // initialRoute: ComponentsScreen.routeName,
+      onGenerateRoute: (RouteSettings settings) {
+        Map<String, WidgetBuilder> routes = {
+          HomeScreen.routeName: (context) => HomeScreen(),
+          ComponentsScreen.routeName: (context) =>
+              ComponentsScreen(heroTag: settings.arguments)
+        };
+
+        WidgetBuilder builder = routes[settings.name];
+        return MaterialPageRoute(builder: builder);
+      },
     );
   }
 }
