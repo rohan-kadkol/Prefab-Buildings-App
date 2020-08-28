@@ -9,11 +9,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomAppBar(),
-        StoreCategorySelector()
-      ],
+    return Scaffold(
+      body: Column(
+        children: [CustomAppBar(), StoreCategorySelector()],
+      ),
     );
   }
 }

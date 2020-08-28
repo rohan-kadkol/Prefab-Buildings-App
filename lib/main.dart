@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (context) => HomeScreen(),
         ComponentsScreen.routeName: (context) => ComponentsScreen()
       },
-      // initialRoute: ComponentsScreen.routeName,
+      // initialRoute: HomeScreen.routeName,
       // onGenerateRoute: (RouteSettings settings) {
       //   Map<String, WidgetBuilder> routes = {
       //     HomeScreen.routeName: (context) => HomeScreen(),
