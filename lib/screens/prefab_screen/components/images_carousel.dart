@@ -7,8 +7,9 @@ import 'package:prefab_app/screens/prefab_screen/components/carousel_image.dart'
 class ImagesCarousel extends StatelessWidget {
   final List<String> assetImages;
   final double height;
+  final double width;
 
-  const ImagesCarousel({@required this.assetImages, this.height});
+  const ImagesCarousel({@required this.assetImages, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class ImagesCarousel extends StatelessWidget {
       children: [
         Container(
           height: height,
+          width: width,
           child: CarouselSlider.builder(
             carouselController: carouselController,
             itemCount: assetImages.length,
@@ -43,16 +45,16 @@ class ImagesCarousel extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CarouselCycleButton(
-              icon: Icons.chevron_left,
-              onTap: () => carouselController.previousPage(curve: Curves.fastOutSlowIn)
-            ),
+                icon: Icons.chevron_left,
+                onTap: () => carouselController.previousPage(
+                    curve: Curves.fastOutSlowIn)),
             const SizedBox(
               width: kDefaultMargin / 2,
             ),
             CarouselCycleButton(
-              icon: Icons.chevron_right,
-              onTap: () => carouselController.nextPage(curve: Curves.fastOutSlowIn)
-            )
+                icon: Icons.chevron_right,
+                onTap: () =>
+                    carouselController.nextPage(curve: Curves.fastOutSlowIn))
           ],
         )
       ],
