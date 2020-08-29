@@ -12,26 +12,25 @@ class PrefabScreen extends StatefulWidget {
 class _PrefabScreenState extends State<PrefabScreen> {
   @override
   Widget build(BuildContext context) {
-    List<String> imageUrls = kImages.values.toList();
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Prefab Screen'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
             color: Colors.red,
-            height: 300.0,
+            height: 400.0,
             child: CarouselSlider.builder(
-              itemCount: imageUrls.length,
+              itemCount: kPrefabImagePaths.length,
               itemBuilder: (BuildContext context, int index) {
                 return Image(
-                  image: NetworkImage(imageUrls[index]),
+                  image: NetworkImage(kPrefabImagePaths[index]),
                 );
               },
               options: CarouselOptions(
-                  height: 300.0,
+                  viewportFraction: .6,
                   autoPlay: true,
                   pauseAutoPlayOnManualNavigate: true,
                   pauseAutoPlayOnTouch: true,
