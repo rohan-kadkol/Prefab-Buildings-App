@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:prefab_app/contants.dart';
 import 'package:prefab_app/screens/prefab_screen/components/images_carousel.dart';
+import 'package:prefab_app/screens/prefab_screen/components/project_description.dart';
 import 'package:prefab_app/screens/prefab_screen/components/table_one.dart';
 import 'package:prefab_app/widgets/custom_appbar.dart';
 
@@ -20,7 +21,7 @@ class _PrefabScreenState extends State<PrefabScreen> {
       //   title: Text('Prefab Screen'),
       // ),
       body: SingleChildScrollView(
-              child: Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CustomAppBar(),
@@ -43,9 +44,11 @@ class _PrefabScreenState extends State<PrefabScreen> {
               assetImages: kPrefabImagePaths,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: kDefaultMargin, vertical: kDefaultMargin),
+              padding: const EdgeInsets.symmetric(
+                  horizontal: kDefaultMargin, vertical: kDefaultMargin),
               child: TableOne(),
-            )
+            ),
+            ProjectDescription()
           ],
         ),
       ),
