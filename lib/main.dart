@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:prefab_app/screens/components_screen/components_screen.dart';
 import 'package:prefab_app/screens/home_screen/home_screen.dart';
+import 'package:prefab_app/screens/prefab_screen/prefab_screen.dart';
+import 'package:prefab_app/screens/prefabs_screen/prefabs_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,8 +23,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
-        ComponentsScreen.routeName: (context) => ComponentsScreen()
+        ComponentsScreen.routeName: (context) => ComponentsScreen(),
+        PrefabsScreen.routeName: (context) => PrefabsScreen(),
+        PrefabScreen.routeName: (context) => PrefabScreen(),
       },
+      initialRoute: PrefabScreen.routeName,
       // initialRoute: HomeScreen.routeName,
       // onGenerateRoute: (RouteSettings settings) {
       //   Map<String, WidgetBuilder> routes = {

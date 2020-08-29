@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:prefab_app/contants.dart';
 import 'package:prefab_app/screens/components_screen/components_screen.dart';
+import 'package:prefab_app/screens/prefabs_screen/prefabs_screen.dart';
 import 'package:prefab_app/widgets/image_text_tile.dart';
 
 class StoreCategorySelector extends StatelessWidget {
@@ -17,7 +18,7 @@ class StoreCategorySelector extends StatelessWidget {
           Expanded(
             child: ImageTextTile(
               onTap: () =>
-                  Navigator.pushNamed(context, ComponentsScreen.routeName),
+                  Navigator.pushNamed(context, PrefabsScreen.routeName),
               name: 'Prefab',
               imageUrl: kImages['prefab'],
             ),
