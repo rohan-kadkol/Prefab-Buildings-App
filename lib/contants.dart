@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const double kDefaultMargin = 20.0;
@@ -33,3 +32,10 @@ const Map<String, String> kImages = {
 
 final List<String> kPrefabImagePaths =
     List.generate(3, (index) => '/assets/images/prefab_$index.png').toList();
+
+final List<BoxShadow> kDefaultShadow = [
+  BoxShadow(
+      offset: Offset(2, 1),
+      color: Colors.grey.withOpacity(.16),
+      blurRadius: 10.0)
+];
