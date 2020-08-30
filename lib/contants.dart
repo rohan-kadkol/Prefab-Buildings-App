@@ -131,7 +131,6 @@ final List<Pair> kWaterAndPlumbingSystem = [
 ];
 
 const String kProjectDescription = """
-  #### Production Description
   ###### Technical Parameter of standard prefab house:
   1. Wind resistance: Grade 11(wind speed≤ 120km/h)
   2. Earthquake resistance: Grade 7

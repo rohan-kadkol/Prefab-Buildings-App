@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:prefab_app/contants.dart';
 import 'package:prefab_app/screens/prefab_screen/components/images_carousel.dart';
@@ -18,9 +19,6 @@ class _PrefabScreenState extends State<PrefabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Prefab Screen'),
-      // ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,8 +49,58 @@ class _PrefabScreenState extends State<PrefabScreen> {
                 pairs: kBasicInfoPairs,
               ),
             ),
-            MarkdownText(
-              text: kProjectDescription,
+            ExpandableNotifier(
+              child: Column(
+                children: [
+                  Expandable(
+                    collapsed: ExpandableButton(
+                      child: Row(
+                        children: [
+                          Expanded(
+                              child: MarkdownText(
+                                  text: '#### Production Description')),
+                          Padding(
+                            padding: const EdgeInsets.all(kDefaultMargin),
+                            child: Icon(Icons.keyboard_arrow_down),
+                          )
+                        ],
+                      ),
+                    ),
+                    expanded: Column(
+                      children: [
+                        ExpandableButton(
+                          child: Row(
+                            children: [
+                              Expanded(
+                                  child: MarkdownText(
+                                      text: '#### Production Description')),
+                              Padding(
+                                padding: const EdgeInsets.all(kDefaultMargin),
+                                child: Icon(Icons.keyboard_arrow_up),
+                              )
+                            ],
+                          ),
+                        ),
+                        MarkdownText(
+                          text: kProjectDescription,
+                        ),
+                        ExpandableButton(
+                          child: Padding(
+                            padding: const EdgeInsets.all(kDefaultMargin),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.keyboard_arrow_up),
+                                Text('Collapse')
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             MarkdownText(
               text: '#### Material List for Prefabricated House',
