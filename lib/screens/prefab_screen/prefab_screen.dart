@@ -5,6 +5,7 @@ import 'package:prefab_app/contants.dart';
 import 'package:prefab_app/screens/prefab_screen/components/images_carousel.dart';
 import 'package:prefab_app/screens/prefab_screen/components/markdown_text.dart';
 import 'package:prefab_app/screens/prefab_screen/components/custom_table.dart';
+import 'package:prefab_app/screens/prefab_screen/components/title_expandable.dart';
 import 'package:prefab_app/screens/prefab_screen/components/title_table.dart';
 import 'package:prefab_app/widgets/custom_appbar.dart';
 
@@ -49,90 +50,47 @@ class _PrefabScreenState extends State<PrefabScreen> {
                 pairs: kBasicInfoPairs,
               ),
             ),
-            ExpandableNotifier(
-              child: Column(
-                children: [
-                  Expandable(
-                    collapsed: ExpandableButton(
-                      child: Row(
-                        children: [
-                          Expanded(
-                              child: MarkdownText(
-                                  text: '#### Production Description')),
-                          Padding(
-                            padding: const EdgeInsets.all(kDefaultMargin),
-                            child: Icon(Icons.keyboard_arrow_down),
-                          )
-                        ],
-                      ),
-                    ),
-                    expanded: Column(
-                      children: [
-                        ExpandableButton(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                  child: MarkdownText(
-                                      text: '#### Production Description')),
-                              Padding(
-                                padding: const EdgeInsets.all(kDefaultMargin),
-                                child: Icon(Icons.keyboard_arrow_up),
-                              )
-                            ],
-                          ),
-                        ),
-                        MarkdownText(
-                          text: kProjectDescription,
-                        ),
-                        ExpandableButton(
-                          child: Padding(
-                            padding: const EdgeInsets.all(kDefaultMargin),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Icons.keyboard_arrow_up),
-                                Text('Collapse')
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+            TitleExpandable(
+              title: 'Production Description',
+              children: [
+                MarkdownText(
+                  text: kProjectDescription,
+                ),
+              ],
             ),
-            MarkdownText(
-              text: '#### Material List for Prefabricated House',
+            TitleExpandable(
+              title: 'Material List for Prefabricated House',
+              children: [
+                TitleTable(
+                  title: 'Main Steel Frame',
+                  pairs: kMainSteelFramePairs,
+                ),
+                TitleTable(
+                  title: 'Roof & Wall',
+                  pairs: kRoofAndWallPairs,
+                ),
+                TitleTable(
+                  title: 'Ceiling & Flooring',
+                  pairs: kCeilingAndFlooring,
+                ),
+                TitleTable(
+                  title: 'Door & Window',
+                  pairs: kDoorAndWindow,
+                ),
+                TitleTable(
+                  title: 'Electrical System',
+                  pairs: kElectricalSystem,
+                ),
+                TitleTable(
+                  title: 'Water & Plumbing System (choose)',
+                  pairs: kWaterAndPlumbingSystem,
+                ),
+                MarkdownText(
+                  text:
+                      'Plumbing System and Rain Water Drainage System as per building design',
+                )
+              ],
             ),
-            TitleTable(
-              title: 'Main Steel Frame',
-              pairs: kMainSteelFramePairs,
-            ),
-            TitleTable(
-              title: 'Roof & Wall',
-              pairs: kRoofAndWallPairs,
-            ),
-            TitleTable(
-              title: 'Ceiling & Flooring',
-              pairs: kCeilingAndFlooring,
-            ),
-            TitleTable(
-              title: 'Door & Window',
-              pairs: kDoorAndWindow,
-            ),
-            TitleTable(
-              title: 'Electrical System',
-              pairs: kElectricalSystem,
-            ),
-            TitleTable(
-              title: 'Water & Plumbing System (choose)',
-              pairs: kWaterAndPlumbingSystem,
-            ),
-            MarkdownText(
-              text:
-                  'Plumbing System and Rain Water Drainage System as per building design',
-            )
           ],
         ),
       ),
