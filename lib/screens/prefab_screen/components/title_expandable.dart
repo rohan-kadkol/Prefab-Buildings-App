@@ -18,61 +18,57 @@ class TitleExpandable extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExpandableNotifier(
       initialExpanded: initialExpanded,
-      child: Column(
-        children: [
-          Expandable(
-            collapsed: ExpandableButton(
+      child: Expandable(
+        collapsed: ExpandableButton(
+          child: Row(
+            children: [
+              Expanded(
+                child: MarkdownText(
+                  text: '#### $title',
+                  selectable: false,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(kDefaultMargin),
+                child: Icon(Icons.keyboard_arrow_down),
+              )
+            ],
+          ),
+        ),
+        expanded: Column(
+          children: [
+            ExpandableButton(
               child: Row(
                 children: [
                   Expanded(
-                    child: MarkdownText(
-                      text: '#### $title',
-                      selectable: false,
-                    ),
-                  ),
+                      child: MarkdownText(
+                    text: '#### $title',
+                    selectable: false,
+                  )),
                   Padding(
                     padding: const EdgeInsets.all(kDefaultMargin),
-                    child: Icon(Icons.keyboard_arrow_down),
+                    child: Icon(Icons.keyboard_arrow_up),
                   )
                 ],
               ),
             ),
-            expanded: Column(
-              children: [
-                ExpandableButton(
+          ]
+            ..addAll(children)
+            ..add(
+              ExpandableButton(
+                child: Padding(
+                  padding: const EdgeInsets.all(kDefaultMargin),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
-                          child: MarkdownText(
-                        text: '#### $title',
-                        selectable: false,
-                      )),
-                      Padding(
-                        padding: const EdgeInsets.all(kDefaultMargin),
-                        child: Icon(Icons.keyboard_arrow_up),
-                      )
+                      Icon(Icons.keyboard_arrow_up),
+                      Text('Collapse')
                     ],
                   ),
                 ),
-              ]
-                ..addAll(children)
-                ..add(
-                  ExpandableButton(
-                    child: Padding(
-                      padding: const EdgeInsets.all(kDefaultMargin),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.keyboard_arrow_up),
-                          Text('Collapse')
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+              ),
             ),
-          ),
-        ],
+        ),
       ),
     );
   }
