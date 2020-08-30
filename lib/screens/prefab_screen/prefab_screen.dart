@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:prefab_app/contants.dart';
 import 'package:prefab_app/screens/prefab_screen/components/custom_icon_button.dart';
 import 'package:prefab_app/screens/prefab_screen/components/images_carousel.dart';
@@ -40,13 +41,31 @@ class _PrefabScreenState extends State<PrefabScreen> {
             Padding(
               padding: const EdgeInsets.all(kDefaultMargin),
               child: Wrap(
-                children: [CustomIconButton(
-                  text: 'Contact',
-                  backgroundColor: Colors.lightGreen,
-                  onTap: () => null,
-                  contentColor: Colors.white,
-                  icon: Icons.contact_mail,
-                )],
+                spacing: kDefaultMargin,
+                runSpacing: kDefaultMargin,
+                children: [
+                  CustomIconButton(
+                    text: 'Contact',
+                    backgroundColor: Colors.lightGreen,
+                    onTap: () => null,
+                    contentColor: Colors.white,
+                    icon: Icons.contact_mail,
+                  ),
+                  CustomIconButton(
+                    text: 'Bookmark',
+                    contentColor: Colors.white,
+                    backgroundColor: Colors.red,
+                    icon: FlutterIcons.bookmark_faw,
+                    onTap: () => null,
+                  ),
+                  CustomIconButton(
+                    text: 'Share',
+                    icon: Icons.share,
+                    backgroundColor: Colors.blue,
+                    contentColor: Colors.white,
+                    onTap: () => null,
+                  )
+                ],
               ),
             ),
             ImagesCarousel(
