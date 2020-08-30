@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:prefab_app/contants.dart';
+import 'package:prefab_app/screens/prefab_screen/components/custom_icon_button.dart';
 import 'package:prefab_app/screens/prefab_screen/components/images_carousel.dart';
 import 'package:prefab_app/screens/prefab_screen/components/markdown_text.dart';
 import 'package:prefab_app/screens/prefab_screen/components/custom_table.dart';
@@ -36,8 +37,17 @@ class _PrefabScreenState extends State<PrefabScreen> {
                   .headline4
                   .copyWith(color: Colors.black87),
             ),
-            const SizedBox(
-              height: kDefaultMargin,
+            Padding(
+              padding: const EdgeInsets.all(kDefaultMargin),
+              child: Wrap(
+                children: [CustomIconButton(
+                  text: 'Contact',
+                  backgroundColor: Colors.lightGreen,
+                  onTap: () => null,
+                  contentColor: Colors.white,
+                  icon: Icons.contact_mail,
+                )],
+              ),
             ),
             ImagesCarousel(
               height: 300.0,
