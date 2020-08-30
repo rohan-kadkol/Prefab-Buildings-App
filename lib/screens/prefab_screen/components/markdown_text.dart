@@ -25,6 +25,7 @@ class MarkdownText extends StatelessWidget {
       data: text,
       shrinkWrap: true,
       selectable: selectable,
+      physics: NeverScrollableScrollPhysics(),
       onTapLink: (url) => _launchUrl(url),
       styleSheet: MarkdownStyleSheet(
         h6: Theme.of(context).textTheme.headline6,

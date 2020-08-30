@@ -42,6 +42,7 @@ class PrefabScreen extends StatelessWidget {
                 child: Wrap(
                   spacing: kDefaultMargin,
                   runSpacing: kDefaultMargin,
+                  alignment: WrapAlignment.center,
                   children: [
                     CustomIconButton(
                       text: 'Contact',
