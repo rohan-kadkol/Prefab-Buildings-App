@@ -29,7 +29,7 @@ class _PrefabScreenState extends State<PrefabScreen> {
               height: kDefaultMargin,
             ),
             Text(
-              'Australian Standard Prefabricated Steel Structure Prefab House',
+              'Modular Prefab Housing Unit',
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
@@ -51,6 +51,7 @@ class _PrefabScreenState extends State<PrefabScreen> {
               ),
             ),
             TitleExpandable(
+              initialExpanded: true,
               title: 'Production Description',
               children: [
                 MarkdownText(
@@ -88,9 +89,13 @@ class _PrefabScreenState extends State<PrefabScreen> {
                 MarkdownText(
                   text:
                       'Plumbing System and Rain Water Drainage System as per building design',
-                )
+                ),
               ],
             ),
+            TitleExpandable(
+              title: 'Technical advantages',
+              children: [MarkdownText(text: kTechnicalAdvantages)],
+            )
           ],
         ),
       ),

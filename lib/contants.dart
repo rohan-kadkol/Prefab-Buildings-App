@@ -166,3 +166,13 @@ const String kProjectDescription = """
   5. Lifting Height of Crane: >6m
   6. Lifting Weight of Crane: 3-30T
   """;
+
+  const String kTechnicalAdvantages = """
+  1. Stable and Earthquake Resistance
+  2. Wind resistance
+  3. Long using time up to 50 years;
+  4. Sound insulation;
+  5. Environment friendly: Most of the excess material can be 100% recycled;
+  6. Fast construction, time saving and labor saving;
+  7. Lower cost and maintenance.ergy conserving and environment protection.
+  """;

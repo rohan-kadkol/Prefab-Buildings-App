@@ -4,9 +4,11 @@ import 'package:url_launcher/url_launcher.dart' as launcher;
 
 class MarkdownText extends StatelessWidget {
   final String text;
+  final bool selectable;
 
   const MarkdownText({
     @required this.text,
+    this.selectable = true
   });
 
   _launchUrl(String url) async {
@@ -22,7 +24,7 @@ class MarkdownText extends StatelessWidget {
     return Markdown(
       data: text,
       shrinkWrap: true,
-      selectable: true,
+      selectable: selectable,
       onTapLink: (url) => _launchUrl(url),
       styleSheet: MarkdownStyleSheet(
         h6: Theme.of(context).textTheme.headline6,

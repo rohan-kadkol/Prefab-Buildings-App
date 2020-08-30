@@ -7,19 +7,29 @@ import 'package:prefab_app/screens/prefab_screen/components/markdown_text.dart';
 class TitleExpandable extends StatelessWidget {
   final String title;
   final List<Widget> children;
+  final bool initialExpanded;
 
-  const TitleExpandable({@required this.title, @required this.children});
+  const TitleExpandable(
+      {@required this.title,
+      @required this.children,
+      this.initialExpanded = false});
 
   @override
   Widget build(BuildContext context) {
     return ExpandableNotifier(
+      initialExpanded: initialExpanded,
       child: Column(
         children: [
           Expandable(
             collapsed: ExpandableButton(
               child: Row(
                 children: [
-                  Expanded(child: MarkdownText(text: '#### $title')),
+                  Expanded(
+                    child: MarkdownText(
+                      text: '#### $title',
+                      selectable: false,
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(kDefaultMargin),
                     child: Icon(Icons.keyboard_arrow_down),
@@ -32,7 +42,11 @@ class TitleExpandable extends StatelessWidget {
                 ExpandableButton(
                   child: Row(
                     children: [
-                      Expanded(child: MarkdownText(text: '#### $title')),
+                      Expanded(
+                          child: MarkdownText(
+                        text: '#### $title',
+                        selectable: false,
+                      )),
                       Padding(
                         padding: const EdgeInsets.all(kDefaultMargin),
                         child: Icon(Icons.keyboard_arrow_up),
