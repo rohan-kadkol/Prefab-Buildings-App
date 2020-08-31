@@ -37,6 +37,7 @@ class PrefabScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white, boxShadow: kDefaultShadow),
                 width: width <= kMaxWidth ? width : kMaxWidth,
+                padding: const EdgeInsets.symmetric(vertical: kDefaultMargin),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

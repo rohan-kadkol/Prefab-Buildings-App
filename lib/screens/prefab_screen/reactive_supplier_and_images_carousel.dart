@@ -20,7 +20,6 @@ class ReactiveSupplierAndImagesCarousel extends StatelessWidget {
     return width <= kMaxWidth
         ? Column(
             children: [
-              SupplierExpandable(),
               ImagesCarousel(
                 height: 300.0,
                 width: 100.0,

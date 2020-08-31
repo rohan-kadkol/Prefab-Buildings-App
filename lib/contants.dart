@@ -41,7 +41,7 @@ const Map<String, String> kImages = {
 };
 
 final List<String> kPrefabImagePaths =
-    List.generate(3, (index) => '/assets/images/prefab_$index.png').toList();
+    List.generate(3, (index) => 'assets/images/prefab_$index.png').toList();
 
 final List<BoxShadow> kDefaultShadow = [
   BoxShadow(
