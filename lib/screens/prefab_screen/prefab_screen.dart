@@ -8,6 +8,10 @@ import 'package:prefab_app/screens/prefab_screen/components/custom_icon_button.d
 import 'package:prefab_app/screens/prefab_screen/components/images_carousel.dart';
 import 'package:prefab_app/screens/prefab_screen/components/markdown_text.dart';
 import 'package:prefab_app/screens/prefab_screen/components/custom_table.dart';
+import 'package:prefab_app/screens/prefab_screen/components/supplier/light_text_button.dart';
+import 'package:prefab_app/screens/prefab_screen/components/supplier/overline_title.dart';
+import 'package:prefab_app/screens/prefab_screen/components/supplier/supplier_expandable.dart';
+import 'package:prefab_app/screens/prefab_screen/components/supplier/supplier_tile.dart';
 import 'package:prefab_app/screens/prefab_screen/components/title_expandable.dart';
 import 'package:prefab_app/screens/prefab_screen/components/title_table.dart';
 import 'package:prefab_app/widgets/custom_appbar.dart';
@@ -37,6 +41,7 @@ class PrefabScreen extends StatelessWidget {
                     .headline4
                     .copyWith(color: Colors.black87),
               ),
+              SupplierExpandable(),
               Padding(
                 padding: const EdgeInsets.all(kDefaultMargin),
                 child: Wrap(
@@ -139,7 +144,8 @@ class PrefabScreen extends StatelessWidget {
       content: Text(text),
       action: SnackBarAction(
         label: 'Undo',
-        onPressed: () => _showSnackbar(context, 'Removed from bookmarks (In the final version, users can see their bookmarks)'),
+        onPressed: () => _showSnackbar(context,
+            'Removed from bookmarks (In the final version, users can see their bookmarks)'),
       ),
     );
     Scaffold.of(context).showSnackBar(snackbar);
