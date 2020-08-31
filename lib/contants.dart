@@ -7,7 +7,7 @@ const double kDefaultBorderRadius = 20.0;
 const double kDefaultTileHeight = 500.0;
 const double kSmallTileHeight = 400.0;
 
-const double kMaxWidth = 1500.0;
+const double kMaxWidth = 1000.0;
 
 kTitleTextStyle(BuildContext context, Color color) => Theme.of(context)
     .textTheme
