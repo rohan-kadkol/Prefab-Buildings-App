@@ -39,8 +39,6 @@ class ReactiveSupplierAndImagesCarousel extends StatelessWidget {
                       width: 100.0,
                       assetImages: kPrefabImagePaths,
                     ),
-                    SupplierExpandable(),
-                    ActionButtonsBar(),
                   ],
                 ),
               ),
