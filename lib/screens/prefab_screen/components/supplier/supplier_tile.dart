@@ -19,7 +19,8 @@ class SupplierTile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CircleAvatar(
-          backgroundImage: NetworkImage(imageUrl),
+          // backgroundImage: NetworkImage(imageUrl),
+          backgroundImage: AssetImage('assets/images/logo.png'),
           radius: 40.0,
         ),
         const SizedBox(width: kDefaultMargin),
@@ -32,7 +33,7 @@ class SupplierTile extends StatelessWidget {
             ),
             const SizedBox(height: kDefaultMargin / 2),
             OverlineTitle(
-              overline: 'From',
+              overline: 'Sourced from',
               title: location,
             ),
           ],

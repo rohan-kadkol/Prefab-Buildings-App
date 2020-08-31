@@ -21,7 +21,7 @@ class ReactiveSupplierAndImagesCarousel extends StatelessWidget {
         ? Column(
             children: [
               ImagesCarousel(
-                height: 300.0,
+                height: 350.0,
                 width: 100.0,
                 assetImages: kPrefabImagePaths,
               ),
@@ -34,7 +34,7 @@ class ReactiveSupplierAndImagesCarousel extends StatelessWidget {
                 child: Column(
                   children: [
                     ImagesCarousel(
-                      height: 500.0,
+                      height: 300.0,
                       width: 100.0,
                       assetImages: kPrefabImagePaths,
                     ),

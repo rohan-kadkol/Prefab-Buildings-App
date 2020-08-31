@@ -50,7 +50,15 @@ class PrefabScreen extends StatelessWidget {
                           .copyWith(color: Colors.black87),
                     ),
                     const SizedBox(height: kDefaultMargin),
-                    SupplierExpandable(),
+                    // SupplierExpandable(),
+                    Padding(
+                      padding: const EdgeInsets.all(kDefaultMargin/2),
+                      child: SupplierTile(
+                        name: 'Expert Prefab Technologies - Canada',
+                        location: 'Shendong, China',
+                        imageUrl: null,
+                      ),
+                    ),
                     ActionButtonsBar(),
                     ReactiveSupplierAndImagesCarousel(),
                     TitleExpandable(

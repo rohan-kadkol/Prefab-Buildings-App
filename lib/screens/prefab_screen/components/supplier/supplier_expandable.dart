@@ -17,7 +17,7 @@ class SupplierExpandable extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SupplierTile(
-                  name: 'Blue Orange Construction',
+                  name: 'Expert Prefab Technologies - Canada',
                   location: 'Shendong, China',
                   imageUrl: kImages['supplier'],
                 ),
@@ -37,7 +37,7 @@ class SupplierExpandable extends StatelessWidget {
                   children: [
                     Expanded(
                       child: SupplierTile(
-                        name: 'Blue Orange Construction',
+                        name: 'Expert Prefab Technologies - Canada',
                         location: 'Shendong, China',
                         imageUrl: kImages['supplier'],
                       ),
