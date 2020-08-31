@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:prefab_app/contants.dart';
 import 'package:prefab_app/widgets/custom_appbar.dart';
+import 'package:prefab_app/widgets/reactive_container.dart';
 
 class DefaultScreen extends StatelessWidget {
   final String title;
@@ -26,17 +27,19 @@ class DefaultScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CustomAppBar(),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: kDefaultMargin,
-                horizontal: kDefaultMargin,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: widgets,
+            ReactiveContainer(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: kDefaultMargin,
+                  horizontal: kDefaultMargin,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: widgets,
+                ),
               ),
             ),
           ],
