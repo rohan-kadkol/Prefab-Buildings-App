@@ -20,7 +20,7 @@ class CarouselImage extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           fit: BoxFit.cover,
-          image: NetworkImage(assetImage),
+          image: AssetImage(assetImage),
         ),
       ),
     );
