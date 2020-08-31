@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Expert Prefab Technologies and Online Store',
       theme: ThemeData(
         primaryColorDark: Color(0xFF0D3A35),
         primaryColor: Color(0xFF13544C),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         PrefabsScreen.routeName: (context) => PrefabsScreen(),
         PrefabScreen.routeName: (context) => PrefabScreen(),
       },
-      initialRoute: PrefabScreen.routeName,
+      // initialRoute: PrefabScreen.routeName,
       // initialRoute: HomeScreen.routeName,
       // onGenerateRoute: (RouteSettings settings) {
       //   Map<String, WidgetBuilder> routes = {
