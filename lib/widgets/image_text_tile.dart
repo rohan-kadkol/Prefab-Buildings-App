@@ -37,16 +37,17 @@ class __StoreCategoryButtonState extends State<ImageTextTile> {
           padding: const EdgeInsets.all(kDefaultMargin/4),
           child: Stack(
             children: [
-              CachedNetworkImage(
-                height: double.infinity,
-                width: double.infinity,
-                fadeInCurve: Curves.easeIn,
-                fadeInDuration: Duration(milliseconds: 1000),
-                fit: BoxFit.cover,
-                imageUrl: widget.imageUrl,
-                placeholder: _loader,
-                errorWidget: _error,
-              ),
+              // CachedNetworkImage(
+              //   height: double.infinity,
+              //   width: double.infinity,
+              //   fadeInCurve: Curves.easeIn,
+              //   fadeInDuration: Duration(milliseconds: 1000),
+              //   fit: BoxFit.cover,
+              //   imageUrl: widget.imageUrl,
+              //   placeholder: _loader,
+              //   errorWidget: _error,
+              // ),
+              Image.network(widget.imageUrl, height: double.infinity, width: double.infinity, fit: BoxFit.cover,),
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(

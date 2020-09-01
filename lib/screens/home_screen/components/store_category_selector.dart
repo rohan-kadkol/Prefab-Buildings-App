@@ -36,7 +36,7 @@ class StoreCategorySelector extends StatelessWidget {
                   onTap: () =>
                       Navigator.pushNamed(context, AutomationScreen.routeName),
                   name: 'Machine Automation Products',
-                  imageUrl: kImages['bolts'],
+                  imageUrl: kImages['automation'],
                 ),
               ),
             ],
@@ -50,7 +50,7 @@ class StoreCategorySelector extends StatelessWidget {
                   onTap: () =>
                       Navigator.pushNamed(context, SpecializedScreen.routeName),
                   name: 'Specialized Design Services',
-                  imageUrl: kImages['prefab'],
+                  imageUrl: kImages['specialized'],
                 ),
               ),
               const SizedBox(
@@ -62,7 +62,7 @@ class StoreCategorySelector extends StatelessWidget {
                   onTap: () =>
                       Navigator.pushNamed(context, ComponentsScreen.routeName),
                   name: 'Online Prefab Consumables Store',
-                  imageUrl: kImages['bolts'],
+                  imageUrl: kImages['consumables'],
                 ),
               ),
             ],

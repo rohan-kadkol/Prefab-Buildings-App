@@ -21,9 +21,9 @@ kPrimaryTextStyle(BuildContext context) =>
 
 const Map<String, String> kImages = {
   'prefab':
-      'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+      'https://expert-prefab-technologies-b.web.app/assets/images/prefab_0.png',
   'bolts':
-      'https://images.unsplash.com/photo-1560636201-c08c2b24e147?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1483&q=80',
+      'https://expert-prefab-technologies-b.web.app/assets/images/bolts_0.png',
   'welding_wires':
       'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
   'flux':
@@ -42,6 +42,12 @@ const Map<String, String> kImages = {
       'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
   'mission':
       'https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+  'automation':
+      'https://expert-prefab-technologies-b.web.app/assets/images/automation.png',
+  'specialized':
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+  'consumables':
+      'https://expert-prefab-technologies-b.web.app/assets/images/consumable.png',
 };
 
 final List<String> kPrefabImagePaths =
