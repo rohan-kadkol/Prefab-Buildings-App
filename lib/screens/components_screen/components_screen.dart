@@ -23,52 +23,59 @@ class ComponentsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CustomAppBar(),
-            ReactiveContainer(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: kDefaultMargin,
-                      horizontal: kDefaultMargin,
+      body: Builder(
+        builder: (BuildContext context) => SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CustomAppBar(),
+              ReactiveContainer(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: kDefaultMargin,
+                        horizontal: kDefaultMargin,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Text(
+                            'Online Prefab Consumables Store',
+                            style: kTitleTextStyle(context, Colors.black87),
+                          ),
+                          const SizedBox(height: kDefaultMargin),
+                          Wrap(
+                            alignment: WrapAlignment.center,
+                            crossAxisAlignment: WrapCrossAlignment.center,
+                            runSpacing: kDefaultMargin,
+                            spacing: kDefaultMargin,
+                            direction: Axis.horizontal,
+                            children: categories
+                                .map((cat) => ImageTextTile(
+                                      width: kSmallTileHeight,
+                                      height: kSmallTileHeight,
+                                      name: cat.name,
+                                      imageUrl: cat.imageUrl,
+                                      onTap: () => _showSnackBar(context),
+                                    ))
+                                .toList(),
+                          )
+                        ],
+                      ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Text(
-                          'Online Prefab Consumables Store',
-                          style: kTitleTextStyle(context, Colors.black87),
-                        ),
-                        const SizedBox(height: kDefaultMargin),
-                        Wrap(
-                          alignment: WrapAlignment.center,
-                          crossAxisAlignment: WrapCrossAlignment.center,
-                          runSpacing: kDefaultMargin,
-                          spacing: kDefaultMargin,
-                          direction: Axis.horizontal,
-                          children: categories
-                              .map((cat) => ImageTextTile(
-                                    width: kSmallTileHeight,
-                                    height: kSmallTileHeight,
-                                    name: cat.name,
-                                    imageUrl: cat.imageUrl,
-                                    onTap: () {},
-                                  ))
-                              .toList(),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
+  }
+
+  _showSnackBar(BuildContext context) {
+    final SnackBar snackBar = SnackBar(content: Text('Under construction'));
+    Scaffold.of(context).showSnackBar(snackBar);
   }
 }
