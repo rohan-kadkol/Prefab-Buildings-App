@@ -28,26 +28,31 @@ class _PageButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: page.second != null
-          ? () => Navigator.pushNamed(context, page.second)
-          : null,
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(
-              width: 3.0,
-              color: Theme.of(context).accentColor,
-              style: BorderStyle.solid),
-          borderRadius: BorderRadius.circular(kDefaultBorderRadius),
-        ),
-        padding: const EdgeInsets.all(kDefaultMargin / 2),
-        margin: const EdgeInsets.symmetric(horizontal: kDefaultMargin / 4),
-        child: Text(
-          page.first,
-          style: Theme.of(context)
-              .textTheme
-              .headline5
-              .copyWith(color: Theme.of(context).primaryColorDark),
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(kDefaultBorderRadius),
+      child: InkWell(
+        onHover: (hover) => null,
+        onTap: page.second != null
+            ? () => Navigator.pushNamed(context, page.second)
+            : null,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+                width: 3.0,
+                color: Theme.of(context).accentColor,
+                style: BorderStyle.solid),
+            borderRadius: BorderRadius.circular(kDefaultBorderRadius),
+          ),
+          padding: const EdgeInsets.all(kDefaultMargin / 2),
+          margin: const EdgeInsets.symmetric(horizontal: kDefaultMargin / 4),
+          child: Text(
+            page.first,
+            style: Theme.of(context)
+                .textTheme
+                .headline5
+                .copyWith(color: Theme.of(context).primaryColorDark),
+          ),
         ),
       ),
     );
