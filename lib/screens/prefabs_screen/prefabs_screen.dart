@@ -18,7 +18,7 @@ class PrefabsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultScreen(
       child: DefaultScreenTile(
-        title: 'Prefabs',
+        title: 'Modular Prefab Housing Unit',
         children: [
           Wrap(
             alignment: WrapAlignment.center,

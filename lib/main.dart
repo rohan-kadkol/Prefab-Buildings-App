@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:prefab_app/screens/about_us_screen/about_us_screen.dart';
+import 'package:prefab_app/screens/automation_screen/automation_screen.dart';
 import 'package:prefab_app/screens/components_screen/components_screen.dart';
 import 'package:prefab_app/screens/contact_us_screen/contact_us_screen.dart';
 import 'package:prefab_app/screens/home_screen/home_screen.dart';
 import 'package:prefab_app/screens/prefab_screen/prefab_screen.dart';
 import 'package:prefab_app/screens/prefabs_screen/prefabs_screen.dart';
+import 'package:prefab_app/screens/specialized_screen/specialized_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,7 +31,9 @@ class MyApp extends StatelessWidget {
         PrefabsScreen.routeName: (context) => PrefabsScreen(),
         PrefabScreen.routeName: (context) => PrefabScreen(),
         AboutUsScreen.routeName: (context) => AboutUsScreen(),
-        ContactUsScreen.routeName: (context) => ContactUsScreen()
+        ContactUsScreen.routeName: (context) => ContactUsScreen(),
+        AutomationScreen.routeName: (context) => AutomationScreen(),
+        SpecializedScreen.routeName: (context) => SpecializedScreen()
       },
       // initialRoute: AboutUsScreen.routeName,
       // initialRoute: HomeScreen.routeName,

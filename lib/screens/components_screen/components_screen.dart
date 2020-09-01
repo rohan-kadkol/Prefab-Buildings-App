@@ -40,7 +40,7 @@ class ComponentsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Text(
-                          'Components',
+                          'Online Prefab Consumables Store',
                           style: kTitleTextStyle(context, Colors.black87),
                         ),
                         const SizedBox(height: kDefaultMargin),
