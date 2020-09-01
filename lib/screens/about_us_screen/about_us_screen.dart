@@ -22,7 +22,7 @@ class AboutUsScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               DefaultScreenTile(
-                title: 'Vision',
+                title: 'Our Vision',
                 children: [
                   Text(
                     'To create the most admired Prefab supply and design company to serve Canadian and American Markets',
@@ -37,7 +37,7 @@ class AboutUsScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               DefaultScreenTile(
-                title: 'Mission',
+                title: 'Our Mission',
                 children: [
                   Text(
                     'We seek to realize our vision by providing extraordinary value to customers by building high performance teams, work processes to far exceed their expectations of product quality ,speed and economy.',

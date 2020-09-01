@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:prefab_app/contants.dart';
 import 'package:prefab_app/models/pair.dart';
 import 'package:prefab_app/screens/about_us_screen/about_us_screen.dart';
+import 'package:prefab_app/screens/contact_us_screen/contact_us_screen.dart';
 import 'package:prefab_app/screens/home_screen/home_screen.dart';
 
 class PagesBar extends StatelessWidget {
   final List<Pair> pages = [
     Pair('Home', HomeScreen.routeName),
     Pair('About Us', AboutUsScreen.routeName),
-    Pair('Contact Us', null)
+    Pair('Contact Us', ContactUsScreen.routeName)
   ];
 
   @override
