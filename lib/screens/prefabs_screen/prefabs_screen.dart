@@ -4,6 +4,7 @@ import 'package:prefab_app/models/category.dart';
 import 'package:prefab_app/screens/prefab_screen/prefab_screen.dart';
 import 'package:prefab_app/widgets/custom_appbar.dart';
 import 'package:prefab_app/widgets/default_screen.dart';
+import 'package:prefab_app/widgets/default_screen_tile.dart';
 import 'package:prefab_app/widgets/image_text_tile.dart';
 
 class PrefabsScreen extends StatelessWidget {
@@ -16,26 +17,28 @@ class PrefabsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultScreen(
-      title: 'Prefabs',
-      children: [
-        Wrap(
-          alignment: WrapAlignment.center,
-          crossAxisAlignment: WrapCrossAlignment.center,
-          runSpacing: kDefaultMargin,
-          spacing: kDefaultMargin,
-          direction: Axis.horizontal,
-          children: categories
-              .map((cat) => ImageTextTile(
-                    width: kSmallTileHeight,
-                    height: kSmallTileHeight,
-                    name: cat.name,
-                    imageUrl: cat.imageUrl,
-                    onTap: () =>
-                        Navigator.pushNamed(context, PrefabScreen.routeName),
-                  ))
-              .toList(),
-        )
-      ],
+      child: DefaultScreenTile(
+        title: 'Prefabs',
+        children: [
+          Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            runSpacing: kDefaultMargin,
+            spacing: kDefaultMargin,
+            direction: Axis.horizontal,
+            children: categories
+                .map((cat) => ImageTextTile(
+                      width: kSmallTileHeight,
+                      height: kSmallTileHeight,
+                      name: cat.name,
+                      imageUrl: cat.imageUrl,
+                      onTap: () =>
+                          Navigator.pushNamed(context, PrefabScreen.routeName),
+                    ))
+                .toList(),
+          )
+        ],
+      ),
     );
   }
 }
